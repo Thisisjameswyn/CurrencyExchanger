@@ -5,13 +5,13 @@ import './css/styles.css';
 import ExchangeCalc from './exchangeCalc.js';
 
 function clearFields() {
-  $('#currencyOne').val("");
-  $('#currencyTwo').val("");
+  // $('#currencyOne').val("");
+  // $('#currencyTwo').val("");
+  $('#amount').val("");
 }
 
 function getElements(response, _curOne, _curTwo, _amount) {
-  if (response.result) {
-    console.log(response.result);
+  if (response.result == "success") {
     $('.showName').text(`The conversion rate from ${_curOne} to ${_curTwo} is : ${response.conversion_rate} for a total value of ${(_amount * response.conversion_rate).toFixed(2)}`);
   } else {
     $('.showErrors').text(`Uh-oh, something went wrong: ${response.message}`);
