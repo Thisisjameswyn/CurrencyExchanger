@@ -11,7 +11,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["html","text"]
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
   },
   "keywords": [],
   "author": "James Wyn",
