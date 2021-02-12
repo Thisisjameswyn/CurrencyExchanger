@@ -9,10 +9,10 @@ function clearFields() {
   $('#currencyTwo').val("");
 }
 
-function getElements(response) {
+function getElements(response, _curOne, _curTwo) {
   if (response.result) {
     console.log(response.result);
-    $('.showName').text(`The conversion rate is: ${response.conversion_rate}`);
+    $('.showName').text(`The conversion rate from ${_curOne} to ${_curTwo} is : ${response.conversion_rate}`);
   } else {
     $('.showErrors').text(`There was an error: ${response.message}`);
   }
@@ -20,12 +20,14 @@ function getElements(response) {
 
 $(document).ready(function() {
   $('#search').click(function() {
+    const curOneText = $("#currencyOne option:selected").text();
+    const curTwoText = $("#currencyTwo option:selected").text();
     const curOne = $("#currencyOne").val();
     const curTwo = $("#currencyTwo").val();
     clearFields();
     ExchangeCalc.getExRate(curOne, curTwo)
       .then(function(response) {
-        getElements(response);
+        getElements(response, curOneText, curTwoText);
       });
   });
 });
