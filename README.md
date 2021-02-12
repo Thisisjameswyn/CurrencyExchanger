@@ -1,17 +1,21 @@
-# (Blank Template)
+## James Wyn
 
-#### (Brief Description of Application)
+# Currency Exchange
 
-#### By (Your Name Here)
 
-## Technologies Used
+### Description
+This is my sixth week project for Epicodus.  The objective is to take a given currency value and convert to a selected country's value using current data retrieved from https://www.exchangerate-api.com/.  The form should allow for the selection of two countries and an amount to exchange, then return the converted value back to the user.
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+This program requires an API key which can be obtained here https://www.exchangerate-api.com/.  Once you have your key you can put it in the .env file as described in the instructions. 
 
-## Description
+### Technologies Used
+* Bootstrap
+* JavaScript
+* jQuery
+* JSON
+* HTML
+* CSS
+* MD
 
 ## Setup/Installation Requirements
 
@@ -20,7 +24,9 @@
 * Delete .git if needing a clean commit history
 * Initilize git
 * Add remote repository to new git
+* Create a file called .env in the top level of the directory
 * Make first commit only adding .gitignore to commit
+* Inside the .env file place the following line of code: API_KEY=[Your API key goes here without brackets]
 * Open new repo to begin npm initilization
 
 ### With Github
@@ -40,11 +46,11 @@
 * Verify install works by running ```npm run test``` and ```npm run build```
 
 * * *
-## Known Bugs
 
-* _Any known issues_
-* _should go here_
+## Link where to find my GitHub link
+
+*https://github.com/Thisisjameswyn/CurrencyExchanger
 
 ## License
-
-## Contact Information
+[MIT License](https://opensource.org/licenses/MIT)
+&copy; James Wyn 2021
