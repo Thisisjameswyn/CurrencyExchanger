@@ -21,10 +21,15 @@ function getElements(response, _curOne, _curTwo, _amount) {
 $(document).ready(function() {
   $('#search').click(function() {
     let amount = parseInt($("#amount").val());
+    console.log(amount);
     const curOneText = $("#currencyOne option:selected").text();
     const curTwoText = $("#currencyTwo option:selected").text();
     const curOne = $("#currencyOne").val();
     const curTwo = $("#currencyTwo").val();
+    if(isNaN(amount)) {
+      $(alert("please enter an amount"));
+      location.reload();
+    }
     clearFields();
     ExchangeCalc.getExRate(curOne, curTwo)
       .then(function(response) {
@@ -32,3 +37,4 @@ $(document).ready(function() {
       });
   });
 });
+    
