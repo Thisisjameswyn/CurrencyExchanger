@@ -10,7 +10,7 @@ function clearFields() {
 
 function getElements(response, _curOneText, _curTwoText, _amount, outPut) {
   if (response.result == "success") {
-    $('.showName').text(`The conversion rate from ${_curOneText} to ${_curTwoText} is : ${response.conversion_rate} for a total value of ${(_amount * response.conversion_rate).toLocaleString('en',{ style: 'currency', currency: outPut})}`);
+    $('.showConv').text(`The conversion rate from ${_curOneText} to ${_curTwoText} is : ${response.conversion_rate} for a total value of ${(_amount * response.conversion_rate).toLocaleString('en',{ style: 'currency', currency: outPut})}`);
   } else {
     $('.showErrors').text(`Uh-oh, something went wrong: ${response.message}`);
   }
