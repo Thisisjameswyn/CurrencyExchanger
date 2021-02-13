@@ -3,5 +3,15 @@
 }
 
 .showConv {
-  color: green;
+  color: rgb(59, 59, 11);
+}
+
+body {
+  background-color: rgb(211, 255, 211);
+  text-decoration: rgb(59, 59, 11);
+  color:rgb(59, 59, 11);
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif ;
 }
