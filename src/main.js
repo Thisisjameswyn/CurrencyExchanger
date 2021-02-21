@@ -9,8 +9,12 @@ function clearFields() {
 }
 
 function getElements(response, _curOneText, _curTwoText, _amount, outPut) {
-  if (response.result == "success") {
+  if (response.result === "success") {
     $('.showConv').text(`The conversion rate from ${_curOneText} to ${_curTwoText} is : ${response.conversion_rate} for a total value of ${(_amount * response.conversion_rate).toLocaleString('en',{ style: 'currency', currency: outPut})}`);
+  } else if (response['error-type'] === 'unsupported-code') {
+    $('.showErrors').text("Sorry that type of currency is not supported");
+  } else if (response.result === 'error') {
+    $('.showErrors').text(`Uh-oh, something went wrong: ${response['error-type']}`);
   } else {
     $('.showErrors').text(`Uh-oh, something went wrong: ${response.message}`);
   }
